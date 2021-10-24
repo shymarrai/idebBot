@@ -52,6 +52,6 @@ app.post('/message', (req, res) => {
   
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, function(){
   console.log('Servidor ativo na porta 3000!');
 })

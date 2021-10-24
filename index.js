@@ -1,10 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const twilio = require('twilio');
 require('dotenv').config()
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const opcoes = [
   'pedra', 'papel', 'tesoura'
@@ -17,7 +15,7 @@ const perde = {
 } 
 
 // aqui vamos inserir a lógica do jogo
-app.post('/message', (req, res) => {
+app.post('/message', (req, res) => {  
   console.log('nova mensagem', req.body.Body);
   const usuario = req.body.Body.toLowerCase();
   switch(usuario) {

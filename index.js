@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const twilio = require('twilio');
+require('dotenv').config()
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
